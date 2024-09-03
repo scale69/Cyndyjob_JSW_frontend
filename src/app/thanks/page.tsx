@@ -13,19 +13,6 @@ import { useRouter } from "next/navigation";
 import { error } from "console";
 import useSWR from "swr";
 
-import type { Metadata, ResolvingMetadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Thanks",
-
-  openGraph: {
-    images: {
-      url: "/favi.png",
-      width: 800,
-      height: 600,
-    },
-  },
-};
 export default function Page() {
   const router = useRouter();
 
