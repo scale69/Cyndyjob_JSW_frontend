@@ -75,25 +75,25 @@ const DrawerApply = ({ judul }: { judul: string }) => {
     }
 
     setHandleInputKosong("");
-    Modal.success({
-      content: (
-        <Result
-          icon={<SmileOutlined />}
-          title={
-            <div>
-              <p>Terima kasih!</p>
-              <p>Halaman akan dialihkan ke whatsapp admin</p>
-            </div>
-          }
-        />
-      ),
-    });
+    // Modal.success({
+    //   content: (
+    //     <Result
+    //       icon={<SmileOutlined />}
+    //       title={
+    //         <div>
+    //           <p>Terima kasih!</p>
+    //           <p>Halaman akan dialihkan ke whatsapp admin</p>
+    //         </div>
+    //       }
+    //     />
+    //   ),
+    // });
     setOpen(false);
 
-    setTimeout(() => {
-      window.open(`//wa.me/${waNumber}?text=${message}`, "_blank");
-      router.push("/thanks");
-    }, 3000);
+    window.open(`//wa.me/${waNumber}?text=${message}`, "_blank");
+    // setTimeout(() => {
+    //   router.push("/thanks");
+    // }, 3000);
     setName("");
   };
 
@@ -128,6 +128,7 @@ const DrawerApply = ({ judul }: { judul: string }) => {
               placeholder="Nama Lengkap"
             />
             <Select
+              size="large"
               placeholder={"Level bahasa Jepang"}
               onChange={handleValue}
               title="tes"
