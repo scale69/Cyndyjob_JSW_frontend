@@ -91,10 +91,10 @@ const DrawerApply = ({ judul }: { judul: string }) => {
     setOpen(false);
 
     window.open(`//wa.me/${waNumber}?text=${message}`, "_blank");
-    // setTimeout(() => {
-    //   router.push("/thanks");
-    // }, 3000);
     setName("");
+    setTimeout(() => {
+      router.push("/thanks");
+    }, 4000);
   };
 
   return (
